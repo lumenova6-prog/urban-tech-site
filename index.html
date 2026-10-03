@@ -15,11 +15,14 @@
             --bg-soft: #0a0f1b;
             --panel: rgba(15, 23, 42, 0.72);
             --panel-solid: #0e1627;
+
             --blue: #3b82f6;
             --blue-light: #60a5fa;
             --cyan: #38bdf8;
+
             --text: #f8fafc;
             --muted: #94a3b8;
+
             --border: rgba(148, 163, 184, 0.18);
         }
 
@@ -30,11 +33,24 @@
 
         body {
             margin: 0;
+
             background:
-                radial-gradient(circle at 50% -10%, rgba(37, 99, 235, 0.22), transparent 32rem),
-                radial-gradient(circle at 90% 30%, rgba(56, 189, 248, 0.08), transparent 26rem),
+                radial-gradient(
+                    circle at 50% -10%,
+                    rgba(37, 99, 235, 0.22),
+                    transparent 32rem
+                ),
+
+                radial-gradient(
+                    circle at 90% 30%,
+                    rgba(56, 189, 248, 0.08),
+                    transparent 26rem
+                ),
+
                 var(--bg);
+
             color: var(--text);
+
             font-family:
                 Inter,
                 system-ui,
@@ -42,6 +58,7 @@
                 BlinkMacSystemFont,
                 "Segoe UI",
                 sans-serif;
+
             line-height: 1.6;
         }
 
@@ -51,469 +68,1144 @@
         }
 
         .container {
-            width: min(1180px, calc(100% - 40px));
+            width: min(
+                1180px,
+                calc(100% - 40px)
+            );
+
             margin: auto;
         }
 
-        /* NAV */
+        /* ==========================================================
+           NAVIGATION
+           ========================================================== */
 
         header {
             position: sticky;
             top: 0;
             z-index: 100;
-            background: rgba(5, 7, 13, 0.82);
-            backdrop-filter: blur(18px);
-            border-bottom: 1px solid var(--border);
+
+            background:
+                rgba(5, 7, 13, 0.82);
+
+            backdrop-filter:
+                blur(18px);
+
+            border-bottom:
+                1px solid var(--border);
         }
 
         nav {
             min-height: 72px;
+
             display: flex;
+
             align-items: center;
-            justify-content: space-between;
+
+            justify-content:
+                space-between;
+
             gap: 24px;
         }
 
         .brand {
             display: flex;
+
             align-items: center;
+
             gap: 12px;
+
             font-weight: 800;
-            letter-spacing: 0.04em;
+
+            letter-spacing:
+                0.04em;
         }
 
         .brand-mark {
             width: 42px;
             height: 42px;
+
             border-radius: 50%;
+
             display: grid;
+
             place-items: center;
+
             background:
-                linear-gradient(135deg, #111827, #020617);
-            border: 1px solid rgba(96, 165, 250, 0.35);
+                linear-gradient(
+                    135deg,
+                    #111827,
+                    #020617
+                );
+
+            border:
+                1px solid
+                rgba(
+                    96,
+                    165,
+                    250,
+                    0.35
+                );
+
             box-shadow:
-                0 0 30px rgba(59, 130, 246, 0.2);
+                0 0 30px
+                rgba(
+                    59,
+                    130,
+                    246,
+                    0.2
+                );
+
             font-size: 12px;
         }
 
         .nav-links {
             display: flex;
+
             gap: 28px;
-            color: var(--muted);
+
+            color:
+                var(--muted);
+
             font-size: 14px;
         }
 
-        .nav-links a:hover {
-            color: var(--text);
+        .nav-links a {
+            transition:
+                color 0.2s ease;
         }
 
-        /* HERO */
+        .nav-links a:hover {
+            color:
+                var(--text);
+        }
+
+        /* ==========================================================
+           HERO
+           ========================================================== */
 
         .hero {
             min-height: 710px;
+
             display: grid;
+
             align-items: center;
-            padding: 90px 0;
+
+            padding:
+                90px 0;
+
             position: relative;
+
             overflow: hidden;
         }
 
         .hero-grid {
             display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
+
+            grid-template-columns:
+                1.15fr
+                0.85fr;
+
             gap: 70px;
+
             align-items: center;
         }
 
         .eyebrow {
-            color: var(--blue-light);
+            color:
+                var(--blue-light);
+
             font-size: 13px;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
+
+            letter-spacing:
+                0.18em;
+
+            text-transform:
+                uppercase;
+
             font-weight: 800;
-            margin-bottom: 18px;
+
+            margin-bottom:
+                18px;
         }
 
         h1 {
             margin: 0;
-            font-size: clamp(54px, 8vw, 100px);
-            line-height: 0.95;
-            letter-spacing: -0.055em;
+
+            font-size:
+                clamp(
+                    54px,
+                    8vw,
+                    100px
+                );
+
+            line-height:
+                0.95;
+
+            letter-spacing:
+                -0.055em;
         }
 
         h1 span {
             background:
-                linear-gradient(100deg, white, #bfdbfe 45%, #38bdf8);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+                linear-gradient(
+                    100deg,
+                    white,
+                    #bfdbfe 45%,
+                    #38bdf8
+                );
+
+            -webkit-background-clip:
+                text;
+
+            background-clip:
+                text;
+
+            color:
+                transparent;
         }
 
         .hero p {
-            max-width: 680px;
-            color: var(--muted);
-            font-size: 19px;
-            margin: 28px 0 34px;
+            max-width:
+                680px;
+
+            color:
+                var(--muted);
+
+            font-size:
+                19px;
+
+            margin:
+                28px 0
+                34px;
         }
 
         .buttons {
             display: flex;
+
             gap: 14px;
-            flex-wrap: wrap;
+
+            flex-wrap:
+                wrap;
         }
 
         .btn {
-            min-height: 50px;
-            padding: 0 23px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            font-weight: 750;
-            transition: 0.2s ease;
+            min-height:
+                50px;
+
+            padding:
+                0 23px;
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                10px;
+
+            font-weight:
+                750;
+
+            transition:
+                0.2s ease;
         }
 
         .btn-primary {
             background:
-                linear-gradient(135deg, var(--blue), #2563eb);
+                linear-gradient(
+                    135deg,
+                    var(--blue),
+                    #2563eb
+                );
+
             box-shadow:
-                0 12px 35px rgba(37, 99, 235, 0.28);
+                0 12px 35px
+                rgba(
+                    37,
+                    99,
+                    235,
+                    0.28
+                );
         }
 
         .btn-secondary {
-            border: 1px solid var(--border);
-            background: rgba(255,255,255,0.035);
-            color: #dbeafe;
+            border:
+                1px solid
+                var(--border);
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.035
+                );
+
+            color:
+                #dbeafe;
         }
 
         .btn:hover {
-            transform: translateY(-2px);
+            transform:
+                translateY(-2px);
         }
 
         .hero-card {
-            min-height: 420px;
-            border-radius: 28px;
-            border: 1px solid var(--border);
-            position: relative;
-            overflow: hidden;
+            min-height:
+                420px;
+
+            border-radius:
+                28px;
+
+            border:
+                1px solid
+                var(--border);
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
             background:
-                radial-gradient(circle at 70% 20%, rgba(59,130,246,.32), transparent 42%),
-                linear-gradient(145deg, #101827, #060a12 70%);
+                radial-gradient(
+                    circle at 70% 20%,
+                    rgba(
+                        59,
+                        130,
+                        246,
+                        0.32
+                    ),
+                    transparent 42%
+                ),
+
+                linear-gradient(
+                    145deg,
+                    #101827,
+                    #060a12 70%
+                );
+
             box-shadow:
-                0 30px 90px rgba(0,0,0,.45);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+                0 30px 90px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.45
+                );
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
         }
 
         .hero-card::before {
             content: "";
-            position: absolute;
-            inset: 0;
+
+            position:
+                absolute;
+
+            inset:
+                0;
+
             background:
-                linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
-            background-size: 32px 32px;
+                linear-gradient(
+                    rgba(
+                        255,
+                        255,
+                        255,
+                        0.025
+                    )
+                    1px,
+                    transparent 1px
+                ),
+
+                linear-gradient(
+                    90deg,
+                    rgba(
+                        255,
+                        255,
+                        255,
+                        0.025
+                    )
+                    1px,
+                    transparent 1px
+                );
+
+            background-size:
+                32px 32px;
+
             mask-image:
-                linear-gradient(to bottom, black, transparent);
+                linear-gradient(
+                    to bottom,
+                    black,
+                    transparent
+                );
         }
 
         .logo-display {
-            text-align: center;
-            position: relative;
-            z-index: 2;
+            text-align:
+                center;
+
+            position:
+                relative;
+
+            z-index:
+                2;
         }
 
         .logo-display .ut {
-            font-size: clamp(56px, 10vw, 104px);
-            font-weight: 200;
-            letter-spacing: .08em;
+            font-size:
+                clamp(
+                    56px,
+                    10vw,
+                    104px
+                );
+
+            font-weight:
+                200;
+
+            letter-spacing:
+                0.08em;
+
             text-shadow:
-                0 0 25px rgba(147,197,253,.65),
-                0 0 65px rgba(59,130,246,.35);
+                0 0 25px
+                rgba(
+                    147,
+                    197,
+                    253,
+                    0.65
+                ),
+
+                0 0 65px
+                rgba(
+                    59,
+                    130,
+                    246,
+                    0.35
+                );
         }
 
         .logo-display .company {
-            margin-top: 10px;
-            color: var(--muted);
-            text-transform: uppercase;
-            letter-spacing: .32em;
-            font-size: 12px;
+            margin-top:
+                10px;
+
+            color:
+                var(--muted);
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                0.32em;
+
+            font-size:
+                12px;
         }
 
-        /* GENERAL */
+        /* ==========================================================
+           GENERAL
+           ========================================================== */
 
         section {
-            padding: 105px 0;
+            padding:
+                105px 0;
         }
 
         .section-heading {
-            margin-bottom: 44px;
+            margin-bottom:
+                44px;
         }
 
         .section-heading h2 {
-            font-size: clamp(36px, 5vw, 54px);
-            margin: 5px 0 14px;
-            letter-spacing: -0.04em;
+            font-size:
+                clamp(
+                    36px,
+                    5vw,
+                    54px
+                );
+
+            margin:
+                5px 0
+                14px;
+
+            letter-spacing:
+                -0.04em;
         }
 
         .section-heading p {
-            max-width: 700px;
-            color: var(--muted);
-            font-size: 17px;
+            max-width:
+                700px;
+
+            color:
+                var(--muted);
+
+            font-size:
+                17px;
         }
 
-        /* PRODUCT */
+        /* ==========================================================
+           PRODUCT
+           ========================================================== */
 
         .product {
             border:
-                1px solid var(--border);
+                1px solid
+                var(--border);
+
             background:
                 linear-gradient(
                     145deg,
-                    rgba(15,23,42,.88),
-                    rgba(8,14,25,.92)
+                    rgba(
+                        15,
+                        23,
+                        42,
+                        0.88
+                    ),
+
+                    rgba(
+                        8,
+                        14,
+                        25,
+                        0.92
+                    )
                 );
-            border-radius: 26px;
-            overflow: hidden;
-            display: grid;
-            grid-template-columns: .9fr 1.1fr;
+
+            border-radius:
+                26px;
+
+            overflow:
+                hidden;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                0.9fr
+                1.1fr;
+
             box-shadow:
-                0 30px 80px rgba(0,0,0,.28);
+                0 30px 80px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.28
+                );
         }
 
         .product-visual {
-            min-height: 420px;
-            display: grid;
-            place-items: center;
-            padding: 50px;
+            min-height:
+                420px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            padding:
+                50px;
+
             background:
-                radial-gradient(circle at center, rgba(59,130,246,.22), transparent 55%),
+                radial-gradient(
+                    circle at center,
+                    rgba(
+                        59,
+                        130,
+                        246,
+                        0.22
+                    ),
+                    transparent 55%
+                ),
+
                 #080c15;
         }
 
         .road-demo {
-            width: 90%;
-            height: 260px;
-            border-radius: 18px;
-            transform: perspective(650px) rotateX(60deg) rotateZ(-12deg);
+            width:
+                90%;
+
+            height:
+                260px;
+
+            border-radius:
+                18px;
+
+            transform:
+                perspective(650px)
+                rotateX(60deg)
+                rotateZ(-12deg);
+
             background:
                 linear-gradient(
                     90deg,
-                    transparent 0 8%,
-                    white 8% 9%,
-                    transparent 9% 46%,
-                    #facc15 46% 47%,
-                    #facc15 48% 49%,
-                    transparent 49% 91%,
-                    white 91% 92%,
-                    transparent 92%
+
+                    transparent
+                    0 8%,
+
+                    white
+                    8% 9%,
+
+                    transparent
+                    9% 46%,
+
+                    #facc15
+                    46% 47%,
+
+                    #facc15
+                    48% 49%,
+
+                    transparent
+                    49% 91%,
+
+                    white
+                    91% 92%,
+
+                    transparent
+                    92%
                 ),
+
                 #202631;
+
             border:
-                1px solid rgba(255,255,255,.1);
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.1
+                );
+
             box-shadow:
-                0 25px 60px rgba(0,0,0,.6),
-                0 0 50px rgba(59,130,246,.12);
-            position: relative;
+                0 25px 60px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.6
+                ),
+
+                0 0 50px
+                rgba(
+                    59,
+                    130,
+                    246,
+                    0.12
+                );
+
+            position:
+                relative;
         }
 
         .road-demo::after {
-            content: "DECAL  •  ROAD MARKINGS  •  SPLINES";
-            position: absolute;
-            left: 50%;
-            top: 72%;
-            transform: translate(-50%, -50%);
-            color: rgba(255,255,255,.55);
-            font-size: 13px;
-            letter-spacing: .12em;
-            white-space: nowrap;
+            content:
+                "DECAL  •  ROAD MARKINGS  •  SPLINES";
+
+            position:
+                absolute;
+
+            left:
+                50%;
+
+            top:
+                72%;
+
+            transform:
+                translate(
+                    -50%,
+                    -50%
+                );
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.55
+                );
+
+            font-size:
+                13px;
+
+            letter-spacing:
+                0.12em;
+
+            white-space:
+                nowrap;
         }
 
         .product-info {
-            padding: 54px;
+            padding:
+                54px;
         }
 
         .product-info h3 {
-            font-size: 40px;
-            margin: 0 0 12px;
-            letter-spacing: -0.035em;
+            font-size:
+                40px;
+
+            margin:
+                0 0 12px;
+
+            letter-spacing:
+                -0.035em;
         }
 
         .product-info > p {
-            color: var(--muted);
-            margin-bottom: 30px;
+            color:
+                var(--muted);
+
+            margin-bottom:
+                30px;
         }
 
         .feature-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-bottom: 34px;
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                12px;
+
+            margin-bottom:
+                34px;
         }
 
         .feature {
-            padding: 14px 15px;
-            border-radius: 10px;
-            background: rgba(255,255,255,.035);
-            border: 1px solid rgba(255,255,255,.055);
-            color: #dbeafe;
-            font-size: 14px;
+            padding:
+                14px 15px;
+
+            border-radius:
+                10px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.035
+                );
+
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.055
+                );
+
+            color:
+                #dbeafe;
+
+            font-size:
+                14px;
         }
 
-        /* EDITIONS */
+        /* ==========================================================
+           EDITIONS
+           ========================================================== */
 
         .edition-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 22px;
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                22px;
         }
 
         .edition {
-            padding: 34px;
+            padding:
+                34px;
+
             border:
-                1px solid var(--border);
-            border-radius: 20px;
-            background: var(--panel);
+                1px solid
+                var(--border);
+
+            border-radius:
+                20px;
+
+            background:
+                var(--panel);
+
+            transition:
+                0.2s ease;
+        }
+
+        .edition:hover {
+            transform:
+                translateY(-4px);
+
+            border-color:
+                rgba(
+                    96,
+                    165,
+                    250,
+                    0.35
+                );
         }
 
         .edition.complete {
             border-color:
-                rgba(96,165,250,.42);
+                rgba(
+                    96,
+                    165,
+                    250,
+                    0.42
+                );
+
             box-shadow:
-                0 0 40px rgba(37,99,235,.08);
+                0 0 40px
+                rgba(
+                    37,
+                    99,
+                    235,
+                    0.08
+                );
         }
 
         .edition h3 {
-            margin: 0 0 10px;
-            font-size: 27px;
+            margin:
+                0 0 10px;
+
+            font-size:
+                27px;
         }
 
         .edition p {
-            color: var(--muted);
+            color:
+                var(--muted);
+        }
+
+        .edition-button {
+            display:
+                inline-flex;
+
+            margin-top:
+                18px;
+
+            color:
+                var(--blue-light);
+
+            font-size:
+                14px;
+
+            font-weight:
+                750;
         }
 
         .tag {
-            display: inline-flex;
-            padding: 6px 10px;
-            border-radius: 999px;
-            background: rgba(59,130,246,.12);
-            border: 1px solid rgba(96,165,250,.25);
-            color: #bfdbfe;
-            font-size: 12px;
-            font-weight: 750;
-            margin-bottom: 18px;
+            display:
+                inline-flex;
+
+            padding:
+                6px 10px;
+
+            border-radius:
+                999px;
+
+            background:
+                rgba(
+                    59,
+                    130,
+                    246,
+                    0.12
+                );
+
+            border:
+                1px solid
+                rgba(
+                    96,
+                    165,
+                    250,
+                    0.25
+                );
+
+            color:
+                #bfdbfe;
+
+            font-size:
+                12px;
+
+            font-weight:
+                750;
+
+            margin-bottom:
+                18px;
         }
 
-        /* TUTORIALS */
+        /* ==========================================================
+           TUTORIALS
+           ========================================================== */
 
         .tutorial-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    1fr
+                );
+
+            gap:
+                18px;
         }
 
         .tutorial {
-            min-height: 180px;
-            padding: 26px;
-            border-radius: 18px;
+            min-height:
+                210px;
+
+            padding:
+                26px;
+
+            border-radius:
+                18px;
+
             border:
-                1px solid var(--border);
+                1px solid
+                var(--border);
+
             background:
                 linear-gradient(
                     145deg,
-                    rgba(19,29,50,.7),
-                    rgba(8,12,20,.9)
+
+                    rgba(
+                        19,
+                        29,
+                        50,
+                        0.7
+                    ),
+
+                    rgba(
+                        8,
+                        12,
+                        20,
+                        0.9
+                    )
                 );
-            transition: .2s ease;
+
+            transition:
+                0.2s ease;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
         }
 
         .tutorial:hover {
-            transform: translateY(-4px);
+            transform:
+                translateY(-5px);
+
             border-color:
-                rgba(96,165,250,.4);
+                rgba(
+                    96,
+                    165,
+                    250,
+                    0.55
+                );
+
+            box-shadow:
+                0 15px 35px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.25
+                );
         }
 
         .tutorial small {
-            color: var(--blue-light);
-            text-transform: uppercase;
-            letter-spacing: .13em;
-            font-weight: 800;
+            color:
+                var(--blue-light);
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                0.13em;
+
+            font-weight:
+                800;
         }
 
         .tutorial h4 {
-            font-size: 21px;
-            margin: 15px 0 8px;
+            font-size:
+                21px;
+
+            margin:
+                15px 0
+                8px;
         }
 
         .tutorial p {
-            color: var(--muted);
-            font-size: 14px;
+            color:
+                var(--muted);
+
+            font-size:
+                14px;
+
+            margin-bottom:
+                0;
         }
 
-        /* ABOUT */
+        .tutorial strong {
+            display:
+                inline-block;
+
+            margin-top:
+                auto;
+
+            padding-top:
+                20px;
+
+            color:
+                var(--blue-light);
+
+            font-size:
+                14px;
+
+            font-weight:
+                750;
+        }
+
+        /* ==========================================================
+           ABOUT
+           ========================================================== */
 
         .about-box {
-            padding: 55px;
-            border-radius: 26px;
+            padding:
+                55px;
+
+            border-radius:
+                26px;
+
             border:
-                1px solid var(--border);
+                1px solid
+                var(--border);
+
             background:
-                radial-gradient(circle at 85% 0%, rgba(59,130,246,.15), transparent 40%),
+                radial-gradient(
+                    circle at 85% 0%,
+                    rgba(
+                        59,
+                        130,
+                        246,
+                        0.15
+                    ),
+                    transparent 40%
+                ),
+
                 var(--panel-solid);
         }
 
         .about-box p {
-            color: var(--muted);
-            max-width: 820px;
-            font-size: 17px;
+            color:
+                var(--muted);
+
+            max-width:
+                820px;
+
+            font-size:
+                17px;
         }
+
+        /* ==========================================================
+           FOOTER
+           ========================================================== */
 
         footer {
             border-top:
-                1px solid var(--border);
-            padding: 38px 0;
-            color: var(--muted);
-            font-size: 14px;
+                1px solid
+                var(--border);
+
+            padding:
+                38px 0;
+
+            color:
+                var(--muted);
+
+            font-size:
+                14px;
         }
 
         .footer-row {
-            display: flex;
-            justify-content: space-between;
-            gap: 25px;
-            flex-wrap: wrap;
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            gap:
+                25px;
+
+            flex-wrap:
+                wrap;
         }
 
-        /* MOBILE */
+        /* ==========================================================
+           MOBILE
+           ========================================================== */
 
-        @media (max-width: 850px) {
+        @media (
+            max-width: 850px
+        ) {
+
             .hero-grid,
             .product,
             .edition-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns:
+                    1fr;
             }
 
             .hero {
-                min-height: auto;
+                min-height:
+                    auto;
             }
 
             .hero-card {
-                min-height: 330px;
+                min-height:
+                    330px;
             }
 
             .tutorial-grid {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns:
+                    1fr 1fr;
             }
 
             .nav-links {
-                display: none;
+                display:
+                    none;
             }
         }
 
-        @media (max-width: 560px) {
+        @media (
+            max-width: 560px
+        ) {
+
             .container {
                 width:
-                    min(100% - 24px, 1180px);
+                    min(
+                        100% - 24px,
+                        1180px
+                    );
             }
 
             section {
@@ -523,419 +1215,798 @@
 
             .tutorial-grid,
             .feature-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns:
+                    1fr;
             }
 
             .product-info,
             .about-box {
-                padding: 30px;
+                padding:
+                    30px;
             }
 
             h1 {
-                font-size: 54px;
+                font-size:
+                    54px;
             }
         }
     </style>
 </head>
 
+
 <body>
 
+
+<!-- ==============================================================
+     NAVIGATION
+     ============================================================== -->
+
 <header>
+
     <div class="container">
+
         <nav>
 
-            <a href="#home" class="brand">
-                <div class="brand-mark">UT</div>
-                <span>URBAN TECH</span>
+            <a
+                href="#home"
+                class="brand"
+            >
+
+                <div class="brand-mark">
+                    UT
+                </div>
+
+                <span>
+                    URBAN TECH
+                </span>
+
             </a>
 
+
             <div class="nav-links">
-                <a href="#products">Products</a>
-                <a href="#editions">Editions</a>
-                <a href="#tutorials">Tutorials</a>
-                <a href="#about">About</a>
+
+                <a href="#products">
+                    Products
+                </a>
+
+                <a href="#editions">
+                    Editions
+                </a>
+
+                <a href="#tutorials">
+                    Tutorials
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
             </div>
 
         </nav>
+
     </div>
+
 </header>
 
 
 <main>
 
-    <!-- HERO -->
 
-    <section class="hero" id="home">
-        <div class="container hero-grid">
+<!-- ==============================================================
+     HERO
+     ============================================================== -->
 
-            <div>
-                <div class="eyebrow">
-                    Unity Development Tools
+<section
+    class="hero"
+    id="home"
+>
+
+    <div class="container hero-grid">
+
+
+        <div>
+
+            <div class="eyebrow">
+                Unity Development Tools
+            </div>
+
+
+            <h1>
+
+                Build smarter.
+
+                <br>
+
+                <span>
+                    Create faster.
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                Urban Tech creates powerful Unity development
+                tools focused on improving editor workflows,
+                environment creation, roads, vehicles, decals
+                and game development productivity.
+
+            </p>
+
+
+            <div class="buttons">
+
+                <a
+                    href="#products"
+                    class="btn btn-primary"
+                >
+
+                    Explore Our Tools
+
+                </a>
+
+
+                <a
+                    href="#tutorials"
+                    class="btn btn-secondary"
+                >
+
+                    Tutorials
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="logo-display">
+
+                <div class="ut">
+                    URBAN
                 </div>
 
-                <h1>
-                    Build smarter.<br>
-                    <span>Create faster.</span>
-                </h1>
+                <div class="ut">
+                    TECH
+                </div>
+
+                <div class="company">
+                    Game Development Tools
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ==============================================================
+     PRODUCTS
+     ============================================================== -->
+
+<section id="products">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <div class="eyebrow">
+                Featured Product
+            </div>
+
+
+            <h2>
+                RT Decal System
+            </h2>
+
+
+            <p>
+
+                A complete Unity decal workflow for roads,
+                environments, markings, graffiti,
+                dirt tracks and custom decal content.
+
+            </p>
+
+        </div>
+
+
+        <div class="product">
+
+
+            <div class="product-visual">
+
+                <div class="road-demo"></div>
+
+            </div>
+
+
+            <div class="product-info">
+
+
+                <div class="tag">
+                    Unity Tool
+                </div>
+
+
+                <h3>
+                    RT Decal System
+                </h3>
+
 
                 <p>
-                    Urban Tech creates powerful Unity development tools
-                    focused on improving editor workflows, environment creation,
-                    roads, vehicles, decals and game development productivity.
+
+                    Create, paint, spline, bake and optimize
+                    decals directly inside Unity with tools
+                    designed for both workflow speed and
+                    large environments.
+
                 </p>
+
+
+                <div class="feature-grid">
+
+
+                    <div class="feature">
+                        Manual Decal Painting
+                    </div>
+
+
+                    <div class="feature">
+                        Surface Conforming
+                    </div>
+
+
+                    <div class="feature">
+                        Spline Decals
+                    </div>
+
+
+                    <div class="feature">
+                        Road Marking Tools
+                    </div>
+
+
+                    <div class="feature">
+                        Dirt Track Creation
+                    </div>
+
+
+                    <div class="feature">
+                        Custom PNG Support
+                    </div>
+
+
+                    <div class="feature">
+                        Baking & Atlases
+                    </div>
+
+
+                    <div class="feature">
+                        LOD & Distance Culling
+                    </div>
+
+
+                </div>
+
 
                 <div class="buttons">
-                    <a href="#products"
-                       class="btn btn-primary">
-                        Explore Our Tools
+
+
+                    <a
+                        href="#editions"
+                        class="btn btn-primary"
+                    >
+
+                        View Editions
+
                     </a>
 
-                    <a href="#tutorials"
-                       class="btn btn-secondary">
-                        Tutorials
+
+                    <a
+                        href="#tutorials"
+                        class="btn btn-secondary"
+                    >
+
+                        Watch Tutorials
+
                     </a>
-                </div>
-            </div>
 
-            <div class="hero-card">
 
-                <div class="logo-display">
-                    <div class="ut">URBAN</div>
-                    <div class="ut">TECH</div>
-
-                    <div class="company">
-                        Game Development Tools
-                    </div>
                 </div>
 
+
             </div>
+
 
         </div>
-    </section>
 
 
-    <!-- PRODUCTS -->
+    </div>
 
-    <section id="products">
+</section>
 
-        <div class="container">
 
-            <div class="section-heading">
-                <div class="eyebrow">
-                    Featured Product
-                </div>
+<!-- ==============================================================
+     EDITIONS
+     ============================================================== -->
 
-                <h2>RT Decal System</h2>
+<section id="editions">
 
-                <p>
-                    A complete Unity decal workflow for roads,
-                    environments, markings, graffiti, dirt tracks
-                    and custom decal content.
-                </p>
+    <div class="container">
+
+
+        <div class="section-heading">
+
+
+            <div class="eyebrow">
+                Choose Your Edition
             </div>
 
 
-            <div class="product">
-
-                <div class="product-visual">
-
-                    <div class="road-demo"></div>
-
-                </div>
+            <h2>
+                Standard or Complete
+            </h2>
 
 
-                <div class="product-info">
+            <p>
 
-                    <div class="tag">
-                        Unity Tool
-                    </div>
+                RT Decal System is available in two editions,
+                allowing developers to choose the version that
+                best fits their workflow.
 
-                    <h3>RT Decal System</h3>
+            </p>
 
-                    <p>
-                        Create, paint, spline, bake and optimize decals
-                        directly inside Unity with tools designed for
-                        both workflow speed and large environments.
-                    </p>
-
-
-                    <div class="feature-grid">
-
-                        <div class="feature">
-                            Manual Decal Painting
-                        </div>
-
-                        <div class="feature">
-                            Surface Conforming
-                        </div>
-
-                        <div class="feature">
-                            Spline Decals
-                        </div>
-
-                        <div class="feature">
-                            Road Marking Tools
-                        </div>
-
-                        <div class="feature">
-                            Dirt Track Creation
-                        </div>
-
-                        <div class="feature">
-                            Custom PNG Support
-                        </div>
-
-                        <div class="feature">
-                            Baking & Atlases
-                        </div>
-
-                        <div class="feature">
-                            LOD & Distance Culling
-                        </div>
-
-                    </div>
-
-
-                    <div class="buttons">
-
-                        <a href="#editions"
-                           class="btn btn-primary">
-                            View Editions
-                        </a>
-
-                        <a href="#tutorials"
-                           class="btn btn-secondary">
-                            Watch Tutorials
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
 
         </div>
-    </section>
 
 
-    <!-- EDITIONS -->
+        <div class="edition-grid">
 
-    <section id="editions">
 
-        <div class="container">
+            <div class="edition">
 
-            <div class="section-heading">
 
-                <div class="eyebrow">
-                    Choose Your Edition
+                <div class="tag">
+                    Standard
                 </div>
 
-                <h2>
-                    Standard or Complete
-                </h2>
+
+                <h3>
+
+                    RT Decal System -
+                    Standard
+
+                </h3>
+
 
                 <p>
-                    RT Decal System is available in two editions,
-                    allowing developers to choose the version that
-                    best fits their workflow.
+
+                    Includes the full core decal workflow,
+                    manual placement, spline decals,
+                    road markings, custom PNG importing,
+                    baking, optimization tools and a
+                    curated starter decal collection.
+
                 </p>
 
+
+                <span class="edition-button">
+
+                    Asset Store link coming soon →
+
+                </span>
+
+
             </div>
 
 
-            <div class="edition-grid">
+            <div class="edition complete">
 
-                <div class="edition">
 
-                    <div class="tag">
-                        Standard
-                    </div>
-
-                    <h3>
-                        RT Decal System - Standard
-                    </h3>
-
-                    <p>
-                        Includes the full core decal workflow,
-                        manual placement, spline decals,
-                        road markings, custom PNG importing,
-                        baking, optimization tools and a curated
-                        starter decal collection.
-                    </p>
-
+                <div class="tag">
+                    Complete
                 </div>
 
 
-                <div class="edition complete">
+                <h3>
 
-                    <div class="tag">
-                        Complete
-                    </div>
+                    RT Decal System -
+                    Complete
 
-                    <h3>
-                        RT Decal System - Complete
-                    </h3>
+                </h3>
 
-                    <p>
-                        Includes everything in Standard plus the
-                        complete decal library and the built-in
-                        PNG Editor for preparing custom decal
-                        artwork directly inside the Unity workflow.
-                    </p>
 
-                </div>
+                <p>
+
+                    Includes everything in Standard plus
+                    the complete decal library and the
+                    built-in PNG Editor for preparing
+                    custom decal artwork directly inside
+                    the Unity workflow.
+
+                </p>
+
+
+                <span class="edition-button">
+
+                    Asset Store link coming soon →
+
+                </span>
+
 
             </div>
+
 
         </div>
-    </section>
 
 
-    <!-- TUTORIALS -->
+    </div>
 
-    <section id="tutorials">
+</section>
 
-        <div class="container">
 
-            <div class="section-heading">
+<!-- ==============================================================
+     TUTORIALS
+     ============================================================== -->
 
-                <div class="eyebrow">
-                    Learn RT Decal System
-                </div>
+<section id="tutorials">
 
-                <h2>
-                    Tutorials
-                </h2>
+    <div class="container">
 
-                <p>
-                    Follow the Urban Tech tutorial series to get
-                    started with RT Decal System and learn its
-                    primary workflows.
-                </p>
 
+        <div class="section-heading">
+
+
+            <div class="eyebrow">
+                Learn RT Decal System
             </div>
 
 
-            <div class="tutorial-grid">
-
-                <div class="tutorial">
-                    <small>Tutorial 01</small>
-                    <h4>Installation & Setup</h4>
-                    <p>
-                        Install RT Decal System and prepare your
-                        Unity project for decal creation.
-                    </p>
-                </div>
+            <h2>
+                Tutorials
+            </h2>
 
 
-                <div class="tutorial">
-                    <small>Tutorial 02</small>
-                    <h4>Placing Your First Decal</h4>
-                    <p>
-                        Learn the basic Scene View decal
-                        placement workflow.
-                    </p>
-                </div>
+            <p>
 
+                Follow the Urban Tech tutorial series to get
+                started with RT Decal System and learn its
+                primary workflows.
 
-                <div class="tutorial">
-                    <small>Tutorial 03</small>
-                    <h4>Road Markings</h4>
-                    <p>
-                        Create and align road markings
-                        across your road environments.
-                    </p>
-                </div>
+            </p>
 
-
-                <div class="tutorial">
-                    <small>Tutorial 04</small>
-                    <h4>Extra Road Markings</h4>
-                    <p>
-                        Add arrows, symbols, chevrons
-                        and additional road details.
-                    </p>
-                </div>
-
-
-                <div class="tutorial">
-                    <small>Tutorial 05</small>
-                    <h4>Creating Dirt Tracks</h4>
-                    <p>
-                        Build curved dirt roads and trails
-                        using spline decal workflows.
-                    </p>
-                </div>
-
-
-                <div class="tutorial">
-                    <small>Tutorial 06</small>
-                    <h4>PNG Editor</h4>
-                    <p>
-                        Learn how to prepare custom decal
-                        artwork using the Complete edition.
-                    </p>
-                </div>
-
-            </div>
 
         </div>
-    </section>
 
 
-    <!-- ABOUT -->
+        <div class="tutorial-grid">
 
-    <section id="about">
 
-        <div class="container">
+            <!-- TUTORIAL 01 -->
 
-            <div class="about-box">
+            <a
+                class="tutorial"
+                href="https://youtu.be/YiyPb5LVKC8?si=0Kx72cyrEN-N1ftq"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
 
-                <div class="eyebrow">
-                    About Urban Tech
-                </div>
 
-                <h2>
-                    Tools built for creators.
-                </h2>
+                <small>
+                    Tutorial 01
+                </small>
+
+
+                <h4>
+                    Installation & Setup
+                </h4>
+
 
                 <p>
-                    Urban Tech develops Unity tools and systems
-                    focused on simplifying complex game development
-                    workflows. Our goal is to create practical,
-                    flexible tools for developers building roads,
-                    vehicles, environments and interactive worlds.
+
+                    Install RT Decal System and
+                    prepare your Unity project
+                    for decal creation.
+
                 </p>
+
+
+                <strong>
+                    Watch Tutorial →
+                </strong>
+
+
+            </a>
+
+
+            <!-- TUTORIAL 02 -->
+
+            <a
+                class="tutorial"
+                href="https://youtu.be/vSDGB3kL7X8?si=oo7cV0JrI3tuYqqC"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+
+                <small>
+                    Tutorial 02
+                </small>
+
+
+                <h4>
+                    Placing Your First Decal
+                </h4>
+
 
                 <p>
-                    RT Decal System is our first publicly released
-                    Unity development tool, with additional systems
-                    currently in development.
+
+                    Learn the basic Scene View
+                    decal placement workflow.
+
                 </p>
 
-            </div>
+
+                <strong>
+                    Watch Tutorial →
+                </strong>
+
+
+            </a>
+
+
+            <!-- TUTORIAL 03 -->
+
+            <a
+                class="tutorial"
+                href="https://youtu.be/nlKbK-n65aI?si=XJTHEXEGjglpTJvj"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+
+                <small>
+                    Tutorial 03
+                </small>
+
+
+                <h4>
+                    Road Markings
+                </h4>
+
+
+                <p>
+
+                    Create and align road markings
+                    across your road environments.
+
+                </p>
+
+
+                <strong>
+                    Watch Tutorial →
+                </strong>
+
+
+            </a>
+
+
+            <!-- TUTORIAL 04 -->
+
+            <a
+                class="tutorial"
+                href="https://youtu.be/3g5J3TSGXIQ?si=PWUo1YX6fNCz6Gwr"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+
+                <small>
+                    Tutorial 04
+                </small>
+
+
+                <h4>
+                    Extra Road Markings
+                </h4>
+
+
+                <p>
+
+                    Add arrows, symbols,
+                    chevrons and additional
+                    road details.
+
+                </p>
+
+
+                <strong>
+                    Watch Tutorial →
+                </strong>
+
+
+            </a>
+
+
+            <!-- TUTORIAL 05 -->
+
+            <a
+                class="tutorial"
+                href="https://youtu.be/ZzFbKub4cF4?si=Vg_3bAZdNwsJJoQD"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+
+                <small>
+                    Tutorial 05
+                </small>
+
+
+                <h4>
+                    Creating Dirt Tracks
+                </h4>
+
+
+                <p>
+
+                    Build curved dirt roads
+                    and trails using spline
+                    decal workflows.
+
+                </p>
+
+
+                <strong>
+                    Watch Tutorial →
+                </strong>
+
+
+            </a>
+
+
+            <!-- TUTORIAL 06 -->
+
+            <a
+                class="tutorial"
+                href="https://youtu.be/WJP90qNdKco?si=5IdEJBI-gAhvrHiR"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+
+                <small>
+                    Tutorial 06
+                </small>
+
+
+                <h4>
+                    PNG Editor
+                </h4>
+
+
+                <p>
+
+                    Learn how to prepare
+                    custom decal artwork
+                    using the Complete edition.
+
+                </p>
+
+
+                <strong>
+                    Watch Tutorial →
+                </strong>
+
+
+            </a>
+
 
         </div>
-    </section>
+
+
+    </div>
+
+</section>
+
+
+<!-- ==============================================================
+     ABOUT
+     ============================================================== -->
+
+<section id="about">
+
+    <div class="container">
+
+
+        <div class="about-box">
+
+
+            <div class="eyebrow">
+                About Urban Tech
+            </div>
+
+
+            <h2>
+                Tools built for creators.
+            </h2>
+
+
+            <p>
+
+                Urban Tech develops Unity tools and systems
+                focused on simplifying complex game development
+                workflows.
+
+                Our goal is to create practical,
+                flexible tools for developers building roads,
+                vehicles, environments and interactive worlds.
+
+            </p>
+
+
+            <p>
+
+                RT Decal System is our first publicly released
+                Unity development tool, with additional systems
+                currently in development.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
 
 </main>
 
 
+<!-- ==============================================================
+     FOOTER
+     ============================================================== -->
+
 <footer>
+
 
     <div class="container footer-row">
 
-        <div>
-            © 2026 Urban Tech. All rights reserved.
-        </div>
 
         <div>
-            Unity tools • Game development • Creator workflows
+
+            © 2026 Urban Tech.
+            All rights reserved.
+
         </div>
+
+
+        <div>
+
+            Unity tools •
+            Game development •
+            Creator workflows
+
+        </div>
+
 
     </div>
 
+
 </footer>
 
+
 </body>
+
 </html>
